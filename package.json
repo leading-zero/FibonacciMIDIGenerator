@@ -1,0 +1,10 @@
+{
+  "name": "FibonacciMIDIGenerator",
+  "version": "1.0.0",
+  "devDependencies": {
+    "tonal": "^4.14.0"
+  },
+  "dependencies": {
+    "midi-writer-js": "^2.1.4"
+  }
+}
