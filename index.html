@@ -1,60 +1,52 @@
 <!DOCTYPE html>
 <html>
-<head>
+  <head>
     <title>Fibonacci MIDI Sequence</title>
-    <link
-            rel='stylesheet'
-            type='text/css'
-            href='css/styles.css'>
-</head>
-<body>
-<div>
-    <div class='container'>
+    <link rel="stylesheet" type="text/css" href="css/styles.css" />
+  </head>
+  <body>
+    <div>
+      <div class="container">
         <h1>Fibonacci MIDI Sequence Generator</h1>
-        <p>Enter the first two numbers of the Fibonacci sequence and the starting index:</p>
-    </div>
-    <form>
+
+        <p>
+          Enter the first two numbers of the Fibonacci sequence and the starting
+          index:
+        </p>
+      </div>
+
+      <form>
         <label for="fib1">First number:</label>
-        <input
-                type="number"
-                id="fib1"
-                name="fib1"
-                min="1"
-                max="127">
+        <input type="number" id="fib1" name="fib1" min="1" max="127" />
 
         <label for="fib2">Second number:</label>
-        <input
-                type="number"
-                id="fib2"
-                name="fib2"
-                min="1"
-                max="127">
+        <input type="number" id="fib2" name="fib2" min="1" max="127" />
 
         <label for="index">Starting index (0 - 15):</label>
-        <input
-                type="number"
-                id="index"
-                name="index"
-                min="0"
-                max="15">
-        <button
-                type="button"
-                value="Generate MIDI"
-                onclick="generateMidi()">Generate MIDI
-        </button>
-        <button
-                type="button"
-                value="Save MIDI"
-                onclick="saveMidi(notes)">Save MIDI
-        </button>
-    </form>
-    <div class='container'>
-        <p>Drag the file into your DAW then adjust the sequence to make some tunes.</p>
-        <p>The notes will be generated in the lowest octave, so you might want to pitch them up.</p>
-    </div>
-    <script src='./node_modules/midi-writer-js/browser/midiwriter.js'></script>
-    <script src='./scripts/generateMidi.js'></script>
-</div>
+        <input type="number" id="index" name="index" min="0" max="15" />
 
-</body>
+        <button type="button" value="Generate MIDI" onclick="generateMidi()">
+          Generate MIDI
+        </button>
+
+        <button type="button" value="Save MIDI" onclick="saveMidi(notes)">
+          Save MIDI
+        </button>
+      </form>
+      <div class="container">
+        <p>
+          Drag the file into your DAW then adjust the sequence to make some
+          tunes.
+        </p>
+
+        <p>
+          The notes will be generated in the lowest octave, so you might want to
+          pitch them up.
+        </p>
+      </div>
+    </div>
+
+    <script src="./node_modules/midi-writer-js/browser/midiwriter.js"></script>
+    <script src="./scripts/generateMidi.js"></script>
+  </body>
 </html>
